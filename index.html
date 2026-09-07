@@ -4,154 +4,220 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tripura Sundari Yatra — Himalaia, maio de 2027 | Vishva Vidya</title>
-<meta name="description" content="Uma peregrinação de estudo no Himalaia com Acharya Jonas Masetti e o astrólogo Jyothi Ananda. Naggar, vale do Kullu, 9 a 24 de maio de 2027. Vagas limitadas.">
+<meta name="description" content="Uma peregrinação de autoconhecimento no Himalaia, em Naggar, no vale do Kullu. Com Acharya Jonas Masetti e o astrólogo Jyothi Ananda. 9 a 24 de maio de 2027. Grupo reduzido.">
 <meta name="robots" content="noindex,nofollow">
 <meta property="og:title" content="Tripura Sundari Yatra — Himalaia, maio de 2027">
-<meta property="og:description" content="Estudo, prática e convivência em Naggar, no vale do Kullu, com Acharya Jonas Masetti.">
+<meta property="og:description" content="Uma peregrinação de autoconhecimento no vale do Kullu, com Acharya Jonas Masetti e o astrólogo Jyothi Ananda.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400&display=swap" rel="stylesheet">
 <style>
+/* Tokens lidos do bundle CSS de vedanta.com.br — bloco do tema base (--c-study:0 85 68) */
 :root{
-  --parchment:#FCFBF5; --cream:#F2F1E2; --body:#2D2A26;
-  --earth:#682A1B; --saffron:#DE6F14; --gold:#B8892F;
-  --study:#005544; --moss:#4A5A3C; --subtle:#8E8F90;
-  --display:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+  --parchment:#FCFBF5; --cream:#F2F1E2; --card:#FFFFFF; --body:#2D2A26;
+  --earth:#682A1B; --saffron:#ED8230; --cta:#ED8230; --gold:#D4A853;
+  --study:#005544; --moss:#4A5A3C; --subtle:#8E8F90; --muted:#717376; --link:#AE5F23;
+  --display:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
   --deva:"Noto Serif Devanagari",serif;
+  --r:.5rem; --r-card:1rem;
+  --sh-md:0 4px 6px -1px rgba(45,42,38,.1),0 2px 4px -2px rgba(45,42,38,.1);
+  --sh-lg:0 10px 15px -3px rgba(45,42,38,.1),0 4px 6px -4px rgba(45,42,38,.1);
+  --sh-xl:0 20px 25px -5px rgba(45,42,38,.12),0 8px 10px -6px rgba(45,42,38,.1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--parchment);color:var(--body);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1080px;margin:0 auto;padding:0 1.5rem}
-.narrow{max-width:660px;margin:0 auto}
-a{color:var(--earth)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--parchment);color:var(--body);font-family:var(--sans);font-size:1.0625rem;line-height:1.75;-webkit-font-smoothing:antialiased;padding-bottom:5.25rem}
+img{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.5rem}
+.narrow{max-width:680px;margin:0 auto}
+a{color:var(--link)}
 
-/* faixa de rascunho */
-.draft{background:var(--earth);color:var(--cream);text-align:center;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;padding:.55rem 1rem}
+.draft{background:var(--earth);color:var(--cream);text-align:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:.6rem 1rem}
+
+/* ── BOTÃO — padrão medido do site: rounded-lg, bg-cta, px-8 py-3.5, shadow-lg, hover -translate-y-0.5 ── */
+.btn{display:inline-block;text-align:center;font-family:var(--sans);font-weight:600;font-size:1.0625rem;line-height:1.5;
+  padding:.875rem 2rem;border-radius:var(--r);border:none;cursor:pointer;text-decoration:none;
+  background:var(--cta);color:#fff;box-shadow:var(--sh-lg);
+  transition:background-color .3s ease,box-shadow .3s ease,transform .3s ease}
+.btn:hover{background:#e2751f;box-shadow:var(--sh-xl);transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn:focus-visible{outline:none;box-shadow:0 0 0 2px var(--parchment),0 0 0 4px var(--saffron)}
+.btn.block{display:block;width:100%}
+.btn.ghost{background:transparent;color:var(--cream);box-shadow:none;border:1px solid rgba(242,241,226,.45)}
+.btn.ghost:hover{background:rgba(242,241,226,.1);box-shadow:none}
 
 /* ── HERO ── */
-.hero{position:relative;background:var(--study);color:var(--cream);text-align:center;padding:5.5rem 0 4.5rem;overflow:hidden}
-.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.deva{font-family:var(--deva);color:rgba(184,137,47,.8);font-size:1.15rem;margin-bottom:.8rem}
-.kick{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:1.1rem}
-.hero h1{font-family:var(--display);font-weight:300;font-size:clamp(2.5rem,7.5vw,4.4rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:1.1rem}
-.hero .sub{font-weight:300;font-size:clamp(1.05rem,2.4vw,1.28rem);color:rgba(242,241,226,.85);max-width:46ch;margin:0 auto 2rem}
-.badges{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-bottom:2.4rem}
-.badge{border:1px solid rgba(184,137,47,.5);color:var(--gold);border-radius:999px;padding:.4rem 1rem;font-size:.83rem;letter-spacing:.04em}
-
-/* ── BOTÃO ── */
-.cta{display:inline-block;background:var(--saffron);color:#fff;font-weight:600;font-size:1.02rem;letter-spacing:.02em;padding:1.05rem 2.6rem;border-radius:3px;text-decoration:none;border:none;cursor:pointer;transition:transform .12s ease,filter .12s ease;box-shadow:0 10px 28px rgba(222,111,20,.28)}
-.cta:hover{filter:brightness(1.07);transform:translateY(-1px)}
-.cta.block{display:block;width:100%;text-align:center}
-.cta-note{font-size:.82rem;color:rgba(242,241,226,.62);margin-top:.9rem}
+.hero{position:relative;background:var(--study) url("img/vale.jpg") center 58% / cover no-repeat;color:var(--cream);text-align:center;padding:8rem 0 6.5rem;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,45,37,.88) 0%,rgba(0,58,47,.7) 42%,rgba(0,38,31,.94) 100%)}
+.hero .wrap{position:relative;z-index:1}
+.deva{font-family:var(--deva);color:rgba(212,168,83,.85);font-size:1.2rem;margin-bottom:.9rem}
+.kick{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:1.2rem}
+.hero h1{font-family:var(--display);font-weight:300;font-size:clamp(2.6rem,8vw,4.75rem);line-height:1.02;letter-spacing:-.025em;margin-bottom:1.25rem}
+.hero .sub{font-weight:300;font-size:clamp(1.1rem,2.5vw,1.35rem);line-height:1.6;color:rgba(242,241,226,.9);max-width:44ch;margin:0 auto 2.25rem}
+.badges{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-bottom:2.5rem}
+.badge{border:1px solid rgba(212,168,83,.45);color:var(--gold);border-radius:999px;padding:.4rem 1.1rem;font-size:.82rem;font-weight:500;letter-spacing:.03em}
+.hero-note{font-size:.85rem;color:rgba(242,241,226,.6);margin-top:1rem}
 
 /* ── SEÇÕES ── */
-section{padding:4.5rem 0}
+section{padding:5.5rem 0}
 .alt{background:var(--cream)}
-h2{font-family:var(--display);font-weight:400;font-size:clamp(1.65rem,3.8vw,2.25rem);color:var(--earth);line-height:1.22;margin-bottom:1.5rem;letter-spacing:-.01em}
-.lead{font-size:1.15rem;font-weight:300}
-p+p{margin-top:1.1rem}
+.dark{background:var(--study);color:var(--cream)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(1.8rem,4vw,2.5rem);color:var(--earth);line-height:1.2;letter-spacing:-.015em;margin-bottom:1.5rem}
+.dark h2{color:var(--gold)}
+.eyebrow{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--saffron);font-weight:600;margin-bottom:.7rem}
+.lead{font-size:1.28rem;font-weight:300;line-height:1.65}
+p+p{margin-top:1.15rem}
+
+/* ── PROMESSA ── */
+.promise{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:2.5rem}
+.pcard{background:var(--card);border:1px solid rgba(45,42,38,.07);border-radius:var(--r-card);padding:1.9rem 1.7rem;box-shadow:var(--sh-md)}
+.pcard .ic{width:34px;height:34px;border-radius:8px;background:rgba(237,130,48,.12);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.pcard .ic span{width:11px;height:11px;border-radius:50%;background:var(--saffron)}
+.pcard h3{font-family:var(--display);font-weight:500;font-size:1.16rem;color:var(--study);margin-bottom:.45rem;line-height:1.3}
+.pcard p{font-size:.98rem;color:rgba(45,42,38,.76);line-height:1.65}
+
+/* ── O LUGAR ── */
+.place{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2.5rem}
+.shot{position:relative;border-radius:var(--r-card);overflow:hidden;background:var(--parchment);aspect-ratio:4/5;box-shadow:var(--sh-lg)}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.shot:hover img{transform:scale(1.04)}
+.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1.15rem .95rem;font-size:.86rem;font-weight:500;color:#fff;background:linear-gradient(transparent,rgba(0,38,31,.85))}
+@media(max-width:640px){.place{grid-template-columns:1fr}}
 
 /* ── LINHA DO TEMPO ── */
-.days{margin-top:2rem;border-left:2px solid rgba(45,42,38,.12);padding-left:1.8rem}
-.day{position:relative;padding-bottom:2.2rem}
-.day::before{content:"";position:absolute;left:-2.32rem;top:.55rem;width:11px;height:11px;border-radius:50%;background:var(--saffron);box-shadow:0 0 0 4px var(--parchment)}
+.days{margin-top:2.5rem;border-left:2px solid rgba(45,42,38,.1);padding-left:2rem}
+.day{position:relative;padding-bottom:2.4rem}
+.day:last-child{padding-bottom:0}
+.day::before{content:"";position:absolute;left:-2.53rem;top:.5rem;width:11px;height:11px;border-radius:50%;background:var(--saffron);box-shadow:0 0 0 4px var(--parchment)}
 .alt .day::before{box-shadow:0 0 0 4px var(--cream)}
-.day .when{font-size:.73rem;letter-spacing:.16em;text-transform:uppercase;color:var(--saffron);font-weight:600}
-.day h3{font-family:var(--display);font-weight:600;font-size:1.14rem;color:var(--study);margin:.15rem 0 .35rem}
-.moon{display:inline-block;margin-top:.6rem;font-size:.9rem;color:var(--moss);border-bottom:1px dotted rgba(74,90,60,.45)}
+.day .when{font-size:.71rem;letter-spacing:.17em;text-transform:uppercase;color:var(--saffron);font-weight:600}
+.day h3{font-family:var(--display);font-weight:500;font-size:1.22rem;color:var(--study);margin:.2rem 0 .4rem}
+.day p{color:rgba(45,42,38,.8)}
+.moon{display:inline-block;margin-top:.7rem;font-size:.93rem;color:var(--moss);font-weight:500;border-bottom:1px dotted rgba(74,90,60,.4)}
 
 /* ── QUEM CONDUZ ── */
-.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.6rem;margin-top:1.6rem}
-.person{background:var(--parchment);border:1px solid rgba(45,42,38,.09);border-radius:3px;padding:1.6rem}
-.alt .person{background:#fff}
-.person .role{font-size:.72rem;letter-spacing:.17em;text-transform:uppercase;color:var(--subtle);font-weight:600}
-.person .nm{font-family:var(--display);font-size:1.2rem;color:var(--study);margin-top:.25rem}
-.person p{font-size:.94rem;color:rgba(45,42,38,.75);margin-top:.5rem}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2.5rem}
+.person{background:var(--card);border:1px solid rgba(45,42,38,.07);border-radius:var(--r-card);overflow:hidden;box-shadow:var(--sh-lg)}
+.person .ph{aspect-ratio:4/3;overflow:hidden;background:var(--cream)}
+.person .ph img{width:100%;height:100%;object-fit:cover}
+.person .tx{padding:1.6rem 1.7rem 1.8rem}
+.person .role{font-size:.7rem;letter-spacing:.19em;text-transform:uppercase;color:var(--subtle);font-weight:600}
+.person .nm{font-family:var(--display);font-weight:500;font-size:1.34rem;color:var(--study);margin-top:.3rem;line-height:1.25}
+.person p{font-size:.97rem;color:rgba(45,42,38,.75);margin-top:.6rem;line-height:1.65}
 
 /* ── PREÇO ── */
-.pricebox{background:var(--study);color:var(--cream);border-radius:4px;padding:2.6rem 2rem;text-align:center;margin-top:1.5rem}
-.pricebox .n{font-family:var(--display);font-weight:300;font-size:clamp(2.6rem,7vw,3.6rem);color:var(--gold);line-height:1}
-.pricebox .per{font-size:.95rem;color:rgba(242,241,226,.72);margin-top:.4rem}
-.pricebox .excl{font-size:.92rem;color:rgba(242,241,226,.72);margin-top:1.3rem;padding-top:1.3rem;border-top:1px solid rgba(184,137,47,.28)}
+.pricebox{background:var(--study);color:var(--cream);border-radius:var(--r-card);padding:3rem 2rem;text-align:center;margin-top:2rem;box-shadow:var(--sh-xl)}
+.pricebox .n{font-family:var(--display);font-weight:300;font-size:clamp(2.8rem,7.5vw,3.9rem);color:var(--gold);line-height:1;letter-spacing:-.02em}
+.pricebox .per{font-size:.97rem;color:rgba(242,241,226,.75);margin-top:.5rem}
+.pricebox .excl{font-size:.94rem;color:rgba(242,241,226,.72);margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(212,168,83,.25)}
 
 /* ── FORM ── */
-.form{background:#fff;border:1px solid rgba(45,42,38,.1);border-radius:4px;padding:2.2rem;box-shadow:0 18px 50px rgba(45,42,38,.07)}
-.form label{display:block;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--subtle);font-weight:600;margin-bottom:.35rem}
-.form input,.form textarea{width:100%;font-family:var(--sans);font-size:1rem;color:var(--body);background:var(--parchment);border:1px solid rgba(45,42,38,.16);border-radius:3px;padding:.8rem .9rem;margin-bottom:1.15rem}
-.form input:focus,.form textarea:focus{outline:none;border-color:var(--saffron);box-shadow:0 0 0 3px rgba(222,111,20,.14)}
-.form .fine{font-size:.82rem;color:var(--subtle);margin-top:.9rem;text-align:center}
+.form{background:var(--card);border:1px solid rgba(45,42,38,.08);border-radius:var(--r-card);padding:2.4rem;box-shadow:var(--sh-xl)}
+.form label{display:block;font-size:.76rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.4rem}
+.form input,.form textarea{width:100%;font-family:var(--sans);font-size:1rem;color:var(--body);background:var(--parchment);border:1px solid rgba(45,42,38,.15);border-radius:var(--r);padding:.85rem .95rem;margin-bottom:1.2rem;transition:border-color .2s,box-shadow .2s}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--saffron);box-shadow:0 0 0 3px rgba(237,130,48,.13)}
+.form .fine{font-size:.85rem;color:var(--subtle);margin-top:1rem;text-align:center}
 
-/* ── LACUNA ── */
-.gap{border:1px dashed rgba(222,111,20,.8);background:rgba(222,111,20,.06);border-radius:3px;padding:1.15rem 1.3rem}
-.gap b{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);margin-bottom:.3rem}
-.gap span{font-size:.94rem;color:rgba(45,42,38,.8)}
+/* ── LACUNA (interna, sai antes de divulgar) ── */
+.gap{border:1px dashed rgba(237,130,48,.75);background:rgba(237,130,48,.05);border-radius:var(--r);padding:1.2rem 1.35rem;margin-top:1.6rem}
+.gap b{display:block;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);margin-bottom:.3rem}
+.gap span{font-size:.93rem;color:rgba(45,42,38,.78);line-height:1.6}
 
-footer{background:var(--study);color:rgba(242,241,226,.72);text-align:center;padding:2.6rem 0;font-size:.87rem}
+footer{background:var(--study);color:rgba(242,241,226,.7);text-align:center;padding:3rem 0;font-size:.88rem}
 
 /* ── BARRA FIXA ── */
-.sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(0,85,68,.97);backdrop-filter:blur(8px);padding:.8rem 1rem;display:flex;gap:1rem;align-items:center;justify-content:center;flex-wrap:wrap;z-index:50;border-top:1px solid rgba(184,137,47,.35)}
-.sticky .t{color:var(--cream);font-size:.9rem}
-.sticky .cta{padding:.7rem 1.6rem;font-size:.92rem;box-shadow:none}
-body{padding-bottom:5rem}
-@media(max-width:520px){.sticky .t{display:none}}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(0,85,68,.97);backdrop-filter:blur(10px);padding:.85rem 1rem;display:flex;gap:1.25rem;align-items:center;justify-content:center;flex-wrap:wrap;z-index:50;border-top:1px solid rgba(212,168,83,.3)}
+.sticky .t{color:var(--cream);font-size:.92rem;font-weight:500}
+.sticky .btn{padding:.7rem 1.75rem;font-size:.95rem;box-shadow:var(--sh-md)}
+@media(max-width:560px){.sticky .t{display:none}.sticky .btn{width:100%}}
 </style>
 </head>
 <body>
 
-<div class="draft">Rascunho — ainda faltam duas informações · página não divulgada</div>
+<div class="draft">Rascunho interno — página não divulgada</div>
 
 <header class="hero">
   <div class="wrap">
     <p class="deva">त्रिपुरसुन्दरी</p>
-    <p class="kick">Peregrinação de estudo · Himalaia indiano</p>
+    <p class="kick">Peregrinação de autoconhecimento · Himalaia indiano</p>
     <h1>Tripura Sundari Yatra</h1>
-    <p class="sub">Duas semanas de estudo, prática e convivência em Naggar, no vale do Kullu — a vila de montanha sob a guarda da deusa que preside aquele lugar.</p>
+    <p class="sub">Duas semanas em Naggar, no vale do Kullu, entre o estudo, os templos e o festival da vila — no lugar onde esta tradição ainda é vivida todos os dias.</p>
     <div class="badges">
       <span class="badge">9 a 24 de maio de 2027</span>
       <span class="badge">Naggar · vale do Kullu</span>
       <span class="badge">Lua cheia no dia 20</span>
     </div>
-    <a href="#inscricao" class="cta">Quero me inscrever</a>
-    <p class="cta-note">Grupo reduzido — a inscrição passa por conversa antes de ser confirmada.</p>
+    <a href="#inscricao" class="btn">Quero minha vaga</a>
+    <p class="hero-note">Grupo reduzido. Acontece uma vez.</p>
   </div>
 </header>
 
 <section>
   <div class="wrap narrow">
-    <p class="lead">Há lugares em que o estudo acontece com menos esforço. Naggar, no vale do Kullu, é um deles.</p>
-    <p>Não é turismo com aulas no meio. É uma <em>yatra</em>: estudo, prática e convivência na paisagem e no calendário em que essa tradição nasceu — o vale, os templos, o festival da vila e a lua cheia, tudo no mesmo movimento.</p>
+    <p class="lead">Existem viagens que a gente repete. Esta não é uma delas.</p>
+    <p>A <em>yatra</em> não é turismo com aulas no meio. É atravessar, junto com o professor e com um grupo pequeno, o vale onde o Vedanta continua sendo transmitido do jeito que sempre foi — a montanha, o templo, o festival, a lua cheia, tudo no mesmo movimento e no mesmo calendário.</p>
+    <p>É o tipo de coisa que muda o lugar de onde você estuda depois. E que você leva pelo resto da vida.</p>
   </div>
 </section>
 
 <section class="alt">
-  <div class="wrap narrow">
-    <h2>O que vamos estudar</h2>
-    <div class="gap">
-      <b>Falta — o nome do texto</b>
-      <span>Esta é a linha que faz um aluno decidir, e ela fica em branco até vir por escrito. Nenhum nome em sânscrito entra aqui por adivinhação.</span>
+  <div class="wrap">
+    <div class="narrow">
+      <p class="eyebrow">Por que ir</p>
+      <h2>O que essa viagem faz com quem vai</h2>
+    </div>
+    <div class="promise">
+      <div class="pcard"><div class="ic"><span></span></div>
+        <h3>Pertencimento</h3>
+        <p>Deixar de estudar a tradição védica de fora e passar a fazer parte dela — da linhagem, e da família de Vedanta que se formou em volta desse estudo.</p></div>
+      <div class="pcard"><div class="ic"><span></span></div>
+        <h3>Convivência com o professor</h3>
+        <p>Duas semanas de proximidade real, de manhã na aula e no resto do dia na estrada. É outra escala de contato — não existe equivalente à distância.</p></div>
+      <div class="pcard"><div class="ic"><span></span></div>
+        <h3>A cultura védica por dentro</h3>
+        <p>Os templos do vale, o festival da vila, a rotina da montanha. Ver de perto o que até aqui você só encontrou nos textos.</p></div>
+      <div class="pcard"><div class="ic"><span></span></div>
+        <h3>O estudo, mais firme</h3>
+        <p>Voltar com o estudo assentado — e com uma memória que acompanha a vida inteira.</p></div>
     </div>
   </div>
 </section>
 
 <section>
+  <div class="wrap">
+    <div class="narrow">
+      <p class="eyebrow">O lugar</p>
+      <h2>Naggar, no vale do Kullu</h2>
+      <p>Uma vila na encosta, acima do rio Beas, sob a guarda da deusa que preside aquele lugar. De um lado o vale se abre; do outro, a floresta de cedros sobe até onde começam os templos.</p>
+    </div>
+    <div class="place">
+      <figure class="shot"><img src="img/vale.jpg" alt="O vale do Kullu visto entre cedros e pinheiros, com a montanha ao fundo" loading="lazy" width="900" height="1600">
+        <figcaption>O vale visto de dentro da floresta de cedros</figcaption></figure>
+      <figure class="shot"><img src="img/pasto.jpg" alt="Pastagem verde na encosta acima de Naggar, com gado e nuvens altas" loading="lazy" width="900" height="1600">
+        <figcaption>As pastagens altas, acima da vila</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
   <div class="wrap narrow">
+    <p class="eyebrow">O roteiro</p>
     <h2>Como são os dias</h2>
     <div class="days">
       <div class="day">
         <p class="when">9 a 11 de maio</p>
         <h3>Chegada</h3>
-        <p>Saída do Brasil entre os dias 9 e 10 — a maioria dos voos parte logo depois da meia-noite do dia 10. No dia 11, chegada em Nova Délhi, voo até Bhuntar/Kullu e a subida de carro até Naggar.</p>
+        <p>Saída do Brasil entre os dias 9 e 10. No dia 11, chegada em Nova Délhi, voo até Bhuntar/Kullu e a subida de carro até Naggar.</p>
       </div>
       <div class="day">
         <p class="when">12 a 17 de maio</p>
         <h3>Imersão e sādhana</h3>
-        <p>Aulas pela manhã. À tarde, visitas a templos e caminhadas pelas montanhas sagradas do vale. À noite, satsaṅga para integrar o dia.</p>
+        <p>Aulas pela manhã. À tarde, os templos do vale e as caminhadas pelas montanhas sagradas. À noite, satsaṅga para assentar o dia.</p>
       </div>
       <div class="day">
         <p class="when">18 a 21 de maio</p>
         <h3>O festival do templo</h3>
-        <p>O festival do templo da vila cai exatamente nesses dias, e a programação se abre para o grupo participar com a orientação certa.</p>
+        <p>O festival do templo da vila cai exatamente nesses dias — e o grupo entra nele acompanhado, com a orientação de quem sabe o que está acontecendo.</p>
         <p class="moon">O ponto alto é a lua cheia do dia 20.</p>
       </div>
       <div class="day">
@@ -163,56 +229,69 @@ body{padding-bottom:5rem}
   </div>
 </section>
 
-<section class="alt">
-  <div class="wrap narrow">
-    <h2>Quem conduz</h2>
+<section>
+  <div class="wrap">
+    <div class="narrow">
+      <p class="eyebrow">Companhia</p>
+      <h2>Dois amigos fazendo esta peregrinação</h2>
+      <p>Não é um pacote com serviços divididos. São dois amigos que decidiram atravessar esse caminho juntos — e abriram o grupo para quem quiser ir junto.</p>
+    </div>
     <div class="people">
       <div class="person">
-        <p class="role">Ensino</p>
-        <p class="nm">Acharya Jonas Masetti</p>
-        <p>Ensino tradicional de Vedanta. Vishva Vidya.</p>
+        <div class="ph"><img src="img/jonas.jpg" alt="Acharya Jonas Masetti ensinando na Índia" loading="lazy" style="object-position:72% 35%"></div>
+        <div class="tx">
+          <p class="role">Ensino de Vedanta</p>
+          <p class="nm">Acharya Jonas Masetti</p>
+          <p>Ensino tradicional de Vedanta. Vishva Vidya.</p>
+        </div>
       </div>
       <div class="person">
-        <p class="role">Astrologia</p>
-        <p class="nm">Jyothi Ananda</p>
+        <div class="ph"><img src="img/jyothi.jpg" alt="O astrólogo Jyothi Ananda no vale do Kullu" loading="lazy" style="object-position:center 28%"></div>
+        <div class="tx">
+          <p class="role">Astrologia védica</p>
+          <p class="nm">Jyothi Ananda</p>
+          <p>Anfitrião da yatra em Naggar.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section>
+<section class="alt">
   <div class="wrap narrow">
-    <h2>Investimento</h2>
+    <p class="eyebrow">Investimento</p>
+    <h2>Valor da yatra</h2>
     <div class="pricebox">
       <p class="n">US$ 2.500</p>
       <p class="per">por pessoa</p>
       <p class="excl">Não inclui passagens aéreas nem alimentação.</p>
     </div>
-    <div class="gap" style="margin-top:1.4rem">
+    <div class="gap">
       <b>Falta — o que está incluído</b>
-      <span>Numa página de viagem esta é a linha que mais gera pergunta. Fica marcada até você definir.</span>
+      <span>Numa página de viagem esta é a linha que mais gera pergunta antes de alguém decidir. Fica marcada até você me passar o que os US$ 2.500 cobrem (hospedagem, transporte interno, entradas, taxas).</span>
     </div>
   </div>
 </section>
 
-<section class="alt" id="inscricao">
+<section id="inscricao">
   <div class="wrap narrow">
-    <h2>Inscrição</h2>
-    <p style="margin-bottom:1.6rem">O grupo é reduzido. Deixe seus dados e a gente entra em contato para confirmar a vaga e explicar os próximos passos.</p>
+    <p class="eyebrow">Inscrição</p>
+    <h2>Reserve sua vaga</h2>
+    <p style="margin-bottom:1.8rem">O grupo é reduzido e a viagem acontece uma vez. Deixe seus dados: a gente entra em contato para conversar, confirmar a vaga e explicar os próximos passos.</p>
     <form class="form" id="f" onsubmit="return enviar(event)">
       <label for="nome">Nome completo</label>
-      <input id="nome" name="Nome" type="text" required placeholder="Como você se chama">
+      <input id="nome" name="Nome" type="text" required autocomplete="name" placeholder="Como você se chama">
 
       <label for="email">E-mail</label>
-      <input id="email" name="E-mail" type="email" required placeholder="seu@email.com">
+      <input id="email" name="E-mail" type="email" required autocomplete="email" placeholder="seu@email.com">
 
       <label for="zap">WhatsApp</label>
-      <input id="zap" name="WhatsApp" type="tel" required placeholder="(00) 00000-0000">
+      <input id="zap" name="WhatsApp" type="tel" required autocomplete="tel" placeholder="(00) 00000-0000">
 
       <label for="obs">Alguma coisa que a gente deva saber</label>
       <textarea id="obs" name="Observacoes" rows="3" placeholder="Opcional"></textarea>
 
-      <button class="cta block" type="submit">Quero minha vaga na Yatra</button>
+      <button class="btn block" type="submit">Quero minha vaga na Yatra</button>
       <p class="fine">Seus dados são usados só para falar sobre esta viagem.</p>
     </form>
     <script>
@@ -232,13 +311,13 @@ body{padding-bottom:5rem}
 <footer>
   <div class="wrap">
     <p>Vishva Vidya — Vedanta</p>
-    <p style="margin-top:.5rem;font-size:.8rem;opacity:.7">Rascunho interno. Esta página não foi divulgada.</p>
+    <p style="margin-top:.55rem;font-size:.81rem;opacity:.65">Rascunho interno. Esta página não foi divulgada.</p>
   </div>
 </footer>
 
 <div class="sticky">
   <span class="t">Tripura Sundari Yatra · 9 a 24 de maio de 2027</span>
-  <a href="#inscricao" class="cta">Quero me inscrever</a>
+  <a href="#inscricao" class="btn">Quero minha vaga</a>
 </div>
 
 </body>
