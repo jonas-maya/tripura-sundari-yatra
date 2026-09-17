@@ -108,12 +108,8 @@ p+p{margin-top:1.15rem}
 .pricebox .per{font-size:.97rem;color:rgba(242,241,226,.75);margin-top:.5rem}
 .pricebox .excl{font-size:.94rem;color:rgba(242,241,226,.72);margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(212,168,83,.25)}
 
-/* ── FORM ── */
-.form{background:var(--card);border:1px solid rgba(45,42,38,.08);border-radius:var(--r-card);padding:2.4rem;box-shadow:var(--sh-xl)}
-.form label{display:block;font-size:.76rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.4rem}
-.form input,.form textarea{width:100%;font-family:var(--sans);font-size:1rem;color:var(--body);background:var(--parchment);border:1px solid rgba(45,42,38,.15);border-radius:var(--r);padding:.85rem .95rem;margin-bottom:1.2rem;transition:border-color .2s,box-shadow .2s}
-.form input:focus,.form textarea:focus{outline:none;border-color:var(--saffron);box-shadow:0 0 0 3px rgba(237,130,48,.13)}
-.form .fine{font-size:.85rem;color:var(--subtle);margin-top:1rem;text-align:center}
+/* ── INSCRIÇÃO ── */
+.fine{font-size:.85rem;color:var(--subtle);margin-top:1rem;text-align:center}
 
 footer{background:var(--study);color:rgba(242,241,226,.7);text-align:center;padding:3rem 0;font-size:.88rem}
 
@@ -137,7 +133,7 @@ footer{background:var(--study);color:rgba(242,241,226,.7);text-align:center;padd
       <span class="badge">Naggar · vale do Kullu</span>
       <span class="badge">Lua cheia no dia 20</span>
     </div>
-    <a href="#inscricao" class="btn">Quero minha vaga</a>
+    <a href="https://hub.vedanta.com.br/forms/tripura-sundari-yatra" class="btn">Quero minha vaga</a>
     <p class="hero-note">Grupo reduzido. Acontece uma vez.</p>
   </div>
 </header>
@@ -268,34 +264,9 @@ footer{background:var(--study);color:rgba(242,241,226,.7);text-align:center;padd
   <div class="wrap narrow">
     <p class="eyebrow">Inscrição</p>
     <h2>Reserve sua vaga</h2>
-    <p style="margin-bottom:1.8rem">O grupo é reduzido e a viagem acontece uma vez. Deixe seus dados: a gente entra em contato para conversar, confirmar a vaga e explicar os próximos passos.</p>
-    <form class="form" id="f" onsubmit="return enviar(event)">
-      <label for="nome">Nome completo</label>
-      <input id="nome" name="Nome" type="text" required autocomplete="name" placeholder="Como você se chama">
-
-      <label for="email">E-mail</label>
-      <input id="email" name="E-mail" type="email" required autocomplete="email" placeholder="seu@email.com">
-
-      <label for="zap">WhatsApp</label>
-      <input id="zap" name="WhatsApp" type="tel" required autocomplete="tel" placeholder="(00) 00000-0000">
-
-      <label for="obs">Alguma coisa que a gente deva saber</label>
-      <textarea id="obs" name="Observacoes" rows="3" placeholder="Opcional"></textarea>
-
-      <button class="btn block" type="submit">Quero minha vaga na Yatra</button>
-      <p class="fine">Seus dados são usados só para falar sobre esta viagem.</p>
-    </form>
-    <script>
-    function enviar(e){
-      e.preventDefault();
-      var g=function(id){return encodeURIComponent(document.getElementById(id).value||'')};
-      var corpo='Nome: '+g('nome')+'%0D%0AE-mail: '+g('email')+'%0D%0AWhatsApp: '+g('zap')+'%0D%0AObservacoes: '+g('obs');
-      window.location.href='mailto:jonas@vedanta.life'
-        +'?subject='+encodeURIComponent('Inscricao - Tripura Sundari Yatra')
-        +'&body='+corpo;
-      return false;
-    }
-    </script>
+    <p style="margin-bottom:1.8rem">O grupo é reduzido e a viagem acontece uma vez. Preencha o formulário de inscrição: a gente entra em contato para conversar, confirmar a vaga e explicar os próximos passos.</p>
+    <a class="btn block" href="https://hub.vedanta.com.br/forms/tripura-sundari-yatra">Quero minha vaga na Yatra</a>
+    <p class="fine">Seus dados são usados só para falar sobre esta viagem.</p>
   </div>
 </section>
 
@@ -307,7 +278,7 @@ footer{background:var(--study);color:rgba(242,241,226,.7);text-align:center;padd
 
 <div class="sticky">
   <span class="t">Tripura Sundari Yatra · 9 a 24 de maio de 2027</span>
-  <a href="#inscricao" class="btn">Quero minha vaga</a>
+  <a href="https://hub.vedanta.com.br/forms/tripura-sundari-yatra" class="btn">Quero minha vaga</a>
 </div>
 
 </body>
